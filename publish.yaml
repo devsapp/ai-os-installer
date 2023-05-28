@@ -3,7 +3,7 @@ Type: Application
 Name: ai-os-installer
 Provider:
   - 阿里云
-Version: 0.0.1
+Version: 0.0.2
 Description: 将带模型的AI应用构建在阿里云函数计算之上
 HomePage: 项目首页地址
 Tags: #标签详情

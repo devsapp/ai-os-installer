@@ -5,7 +5,7 @@ vars:
   region: '{{ region }}'
   appName: '{{ appName }}'
   service:
-    name: "{{ appName }}"
+    name: server
     description: '模型服务的应用模板'
     nasConfig: auto
     vpcConfig: auto
@@ -101,7 +101,7 @@ services:
             payload: '{}'
             cronExpression: '@every 2m'
             enable: false
-  maas-server:
+  ai-app-server:
     component: fc
     props:
       region: ${vars.region}
