@@ -3,8 +3,8 @@ Type: Application
 Name: ai-os-installer
 Provider:
   - 阿里云
-Version: 0.0.2
-Description: 将带模型的AI应用构建在阿里云函数计算之上
+Version: dev
+Description: 将带模型的AI应用构建在阿里云函数计算之上,带磁盘管理，默认镜像地址
 HomePage: 项目首页地址
 Tags: #标签详情
   - 部署函数
@@ -20,7 +20,7 @@ Parameters:
     region:
       title: 地域
       type: string
-      default: 
+      default: 'cn-hangzhou'
       description: 创建应用所在的地区
       enum:
         - cn-beijing
@@ -28,11 +28,11 @@ Parameters:
         - cn-shanghai
         - cn-shenzhen
     imageUrl:
-      title: stable-diffusion 镜像地址
+      title: AI运行时镜像地址
       type: string
-      default: ''
+      default: 'registry.cn-hangzhou.aliyuncs.com/rocketmq-community/llm-public:v3'
       pattern: "^[a-zA-Z_][a-zA-Z0-9-_:/.]{0,127}$"
-      description: ''
+      description: '默认 registry.cn-hangzhou.aliyuncs.com/rocketmq-community/llm-public:v3'
     appName:
       title: 应用名
       type: string
